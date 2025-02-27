@@ -13,36 +13,70 @@
     <link rel="stylesheet" href="./pages/index.css" />
     <link rel="shortcut icon" href="./favicon.ico.svg" />
   </head>
-  <body>
+  <body class="body">
     <div class="page">
       <header class="header">
         <img src="./favicon.ico.svg" alt="logo vector" class="header__logo" />
         <img src="./images/Line.svg" alt="linea vector" class="header__line" />
       </header>
       <main class="content">
-        <section class="profile">
+        <section class="profile" id="profile">
           <img
             src="./images/image.jpg"
             alt="img profile"
             class="profile__avatar"
           />
-          <div class="profile__intro">
-            <h2 class="profile__name">Jacques Cousteau</h2>
-            <h3 class="profile__job">Explorador</h3>
+          <div class="profile__info">
+            <h2 class="profile__name" id="profile-name">Jacques Cousteau</h2>
+            <h3 class="profile__job" id="profile-job">Explorador</h3>
             <button class="profile__edit-button">
-              <img src="./images/Rectangle.svg" alt="boton editar" />
+              <img src="./images/Rectangle.svg" alt="boton editar" id="edit-button-open" />
             </button>
           </div>
               <button class="profile__add-button">
                 <img src="./images/Add Button.svg" alt="boton agregar" />
               </button>
         </section>
-        <form></form>
+
+        <div class="form">
+        <form class="profile__edit-form">
+          <header class="profile__edit-form-header">Editar perfil</header>
+          <input type="text" class="profile__edit-form-input profile__edit-form-input-name"
+          placeholder="Nombre"
+          minlength="2"
+          maxlength="50"
+          id="name"
+          required>
+          <input type="text" class="profile__edit-form-input profile__edit-form-input-job"
+          placeholder="Acerca de mí"
+          minlength="5"
+          maxlength="200"
+          id="job"
+          required>
+          <button class="profile__edit-form-button profile__edit-form-button-save">Guardar</button>
+        </form>
+      </div>
+
         <section class="elements">
+            <img class="element__image" src="./images/valle_de_yosemite.jpg" alt="valle_de_yosemite">
+            <h2>Valle de Yosemite</h2>
+            <img class="element__image" src="./images/lago_louise.jpg" alt="lago_louise">
+            <h2>Lago Louise</h2>
+            <img class="element__image" src="./images/montañas_calvas.jpg" alt="montañas_calvas">
+            <h2>Montañas Calvas</h2>
+            <img class="element__image" src="./images/latemar.jpg" alt="latemar">
+            <h2>Latear</h2>
+            <img class="element__image" src="./images/vanois_national.jpg" alt="vanois_national">
+            <h2>Vanois National...</h2>
+            <img class="element__image" src="./images/lago_di_braies.jpg" alt="lago_di_braies">
+            <h2>Lago di Braies</h2>
         </section>
           </div>
-        </section>
       </main>
+      <footer class="footer">
+        <p>© 2025 Around The U.S. by Mauricio Pizarro</p>
+      </footer>
     </div>
+    <script></script>
   </body>
 </html>
