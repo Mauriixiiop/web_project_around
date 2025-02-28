@@ -34,13 +34,13 @@
             </button>
           </div>
               <button class="profile__add-button">
-                <img src="./images/Add Button.svg" alt="boton agregar" />
+                <img src="./images/Add Button.png" alt="boton agregar" />
               </button>
         </section>
 
 
 
-        <section class="elements">
+        <section class="elements__container">
           <div class="element">
             <img class="element__image" src="./images/valle_de_yosemite.jpg" alt="valle_de_yosemite">
             <h2 class="element__description">Valle de Yosemite</h2>
@@ -72,24 +72,26 @@
         <p>© 2025 Around The U.S. by Mauricio Pizarro</p>
       </footer>
     </div>
-            <div class="form">
-        <form class="profile__edit-form">
-          <header class="profile__edit-form-header">Editar perfil</header>
-          <input type="text" class="profile__edit-form-input profile__edit-form-input-name"
+            <div class="popup">
+              <div class="popup__overlay"></div>
+              <form class="popup__form" id="">
+              <img class="popup__close" src="./images/Close Icon.png" alt="boton para cerrar" id="close-button">
+              <h2 class="form__title">Editar perfil</h2>
+          <input type="text" class="form__input"
           placeholder="Nombre"
           minlength="2"
           maxlength="50"
-          id="name"
+          id="input-name"
           required>
-          <input type="text" class="profile__edit-form-input profile__edit-form-input-job"
+          <input type="text" class="form__input"
           placeholder="Acerca de mí"
           minlength="5"
           maxlength="200"
           id="job"
           required>
-          <button class="profile__edit-form-button profile__edit-form-button-save">Guardar</button>
-        </form>
+          <button type="submit" class="form__submit">Guardar</button>
+          </form>
       </div>
-    <script src=""></script>
+    <script src="./pages/index.js" type=""></script>
   </body>
 </html>
