@@ -124,6 +124,7 @@
 
 .element {
   max-width: 282px;
+  height: 361px;
   display: flex;
   flex-direction: column;
   background-color: #fff;
@@ -135,7 +136,7 @@
   width: 100%;
 }
 
-.element__description {
+.element__name {
   color: black;
   font-family: "Inter", sans-serif;
   font-size: 24px;
@@ -143,11 +144,11 @@
   display: flex;
   max-width: 246px;
   text-align: left;
-  justify-content: space-between;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
   font-weight: 900;
+  margin: 25px 15px 31px 21px;
 }
 
 .element__image {
@@ -157,6 +158,15 @@
   height: 100%;
 }
 
+.element__image-like {
+  background: url(../images/Group.png) no-repeat;
+  width: 21px;
+  height: 19px;
+  border: none;
+  cursor: pointer;
+  background-size: contain;
+}
+
 .footer {
   color: #545454;
   font-size: 18px;
@@ -164,8 +174,10 @@
   font-family: "Inter", sans-serif;
   font-weight: 400;
   max-width: 318px;
-  margin: 67px auto 60px auto;
   display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin: 67px auto 60px auto;
 }
 
 .popup {
