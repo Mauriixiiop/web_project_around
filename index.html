@@ -37,40 +37,57 @@
               </button>
         </section>
 
-        <main class="elements__container">
+        <main class="main">
+          <section class="elements__container">
           <div class="element">
-            <div></div>
             <img class="element__image" src="./images/valle_de_yosemite.jpg" alt="valle_de_yosemite">
+            <div class="element__info">
             <h2 class="element__name">Valle de Yosemite</h2>
-            <button class="element__image-like"></button>
+            <img class="element__icon" src="./images/Group.png" alt=""corazon>
+          </div>
             </div>
             <div class="element">
             <img class="element__image" src="./images/lago_louise.jpg" alt="lago_louise">
+            <div class="element__info">
             <h2 class="element__name">Lago Louise</h2>
+            <img class="element__icon" src="./images/Group.png" alt=""corazon>
+          </div>
             </div>
             <div class="element">
             <img class="element__image" src="./images/montañas_calvas.jpg" alt="montañas_calvas">
+            <div class="element__info">
             <h2 class="element__name">Montañas Calvas</h2>
+            <img class="element__icon" src="./images/Group.png" alt=""corazon>
+          </div>
             </div>
             <div class="element">
             <img class="element__image" src="./images/latemar.jpg" alt="latemar">
+            <div class="element__info">
             <h2 class="element__name">Latear</h2>
+            <img class="element__icon" src="./images/Group.png" alt=""corazon>
+          </div>
             </div>
             <div class="element">
             <img class="element__image" src="./images/vanois_national.jpg" alt="vanois_national">
+            <div class="element__info">
             <h2 class="element__name">Vanois National...</h2>
+
+          </div>
             </div>
             <div class="element">
             <img class="element__image" src="./images/lago_di_braies.jpg" alt="lago_di_braies">
+            <div class="element__info">
             <h2 class="element__name">Lago di Braies</h2>
+          </div>
             </div>
+            </section>
         </main>
           </div>
       <footer class="footer">
         <p>© 2025 Around The U.S. by Mauricio Pizarro</p>
       </footer>
     </div>
-            <div class="popup">
+            <!---<div class="popup" id>
               <div class="popup__overlay"></div>
               <form class="popup__form" id="">
               <img class="popup__close" src="./images/Close Icon.png" alt="boton para cerrar" id="close-button">
@@ -89,7 +106,20 @@
           required>
           <button type="submit" class="form__submit">Guardar</button>
           </form>
-      </div>
+      </div> -->
+
+      <section class="popup">
+        <!--<div class="popup__overlay"></div>-->
+        <div class="popup__container">
+          <h2 class="popup__form-title">Editar Perfil</h2>
+          <form class="popup__form">
+            <input class="popup__form-name" type="text" id="name" name="name" placeholder="Nombre" required>
+            <input class="popup__form-job" type="text" id="job" name="job" placeholder="Acerca de mi" required>
+            <button class="popup__submit-button">Guardar</button>
+          </form>
+        </div>
+        <img src="./images/Close Icon.png" class="popup__button-close">
+      </section>
     <script src="./pages/index.js" type=""></script>
   </body>
 </html>

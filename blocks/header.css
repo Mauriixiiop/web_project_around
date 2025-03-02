@@ -1,0 +1,15 @@
+.header {
+  max-width: 880px;
+  margin: 45px 200px 40px 200px;
+  width: 100%;
+}
+
+.header__logo {
+  width: 100%;
+  max-width: 173px;
+  display: block;
+}
+
+.header__line {
+  margin-top: 41px;
+}
