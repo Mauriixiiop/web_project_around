@@ -13,3 +13,12 @@
 .header__line {
   margin-top: 41px;
 }
+
+@media screen and (max-width: 880px) {
+  .header {
+    max-width: 320px;
+    width: 100%;
+    margin-top: 28px;
+    margin-bottom: 42px;
+  }
+}
