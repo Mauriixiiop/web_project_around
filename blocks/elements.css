@@ -63,9 +63,21 @@
   padding-right: 18px;
 }
 
-@media screen and (max-width: 800px) {
-  .elements__container {
+@media screen and (max-width: 768px) {
+  .gallery {
     display: grid;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: 1fr;
+    grid-gap: 19px 20px;
+    width: 100%;
+    margin-top: 36px;
+    margin-bottom: 50px;
+    max-width: 320px;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .gallery {
+    display: grid;
+    grid-template-columns: 1fr;
   }
 }
