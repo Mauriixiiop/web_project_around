@@ -15,4 +15,4 @@ JavaScript: Utilizado para darle interactividad y una función dinámica a la p�
 Autor
 Mauricio Pizarro
 
-Enlace a Github Pages:
+Enlace a Github Pages: https://mauriixiiop.github.io/web_project_around/
