@@ -29,5 +29,7 @@ function handleProfileFormSubmit(evt) {
   openPopup.classList.remove("popup_opened");
 }
 
+formElement.addEventListener("submit", handleProfileFormSubmit);
+
 buttonPopup.addEventListener("click", handlePopupOpen);
 buttonClosePopup.addEventListener("click", handlePopupClose);
