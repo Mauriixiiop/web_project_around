@@ -56,13 +56,17 @@
   width: 24px;
   height: 24px;
   margin: 0;
-  padding: 0;
+  padding: 5px;
   box-sizing: border-box;
   align-self: center;
   margin-left: auto;
   cursor: pointer;
   box-sizing: border-box;
-  border: none;
+  border: 1px solid white;
+  background-image: url(../images/lapiz.svg);
+  background-size: cover;
+  background-origin: content-box;
+  background-repeat: no-repeat;
 }
 
 .profile__edit-button:hover {

@@ -4,10 +4,11 @@
   display: flex;
   justify-content: center;
   z-index: 100;
-  position: absolute;
+  position: fixed;
   display: none; /*opción ocultar el popup */
-  top: 195px;
+  top: 0;
   left: 0;
+  align-items: center;
 }
 
 .popup__form-title {
@@ -29,6 +30,7 @@
   flex-direction: column;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+  position: relative;
 }
 
 .popup__form-input {
@@ -65,10 +67,13 @@
   width: 40px;
   height: 40px;
   cursor: pointer;
-  transform: rotate(45);
   color: white;
   background-color: black;
   background-repeat: no-repeat;
+  position: absolute;
+  top: -45px;
+  right: -45px;
+  border: none;
 }
 
 .popup__button-close:hover {
