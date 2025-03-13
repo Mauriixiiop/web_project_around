@@ -63,6 +63,11 @@
   padding-right: 18px;
 }
 
+.gallery__card-icon:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+
 @media screen and (max-width: 768px) {
   .gallery {
     display: grid;

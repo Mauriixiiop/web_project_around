@@ -31,19 +31,13 @@
           <div class="profile__info">
             <h1 class="profile__name" id="profile-name">Jacques Cousteau</h1>
             <p class="profile__job" id="profile-job">Explorador</p>
-            <button class="profile__edit-button">
-              <!--               <img
-                src="./images/Rectangle.svg"
-                alt="Editar perfil"
-                id="edit-button-open"
-              /> -->
-            </button>
+            <button class="profile__edit-button"></button>
           </div>
           <button class="profile__add-button">
             <img src="./images/Add Button.png" alt="Boton agregar" />
           </button>
         </section>
-
+        <!---Eliminar luego
         <section class="gallery">
           <div class="gallery__card">
             <img
@@ -136,6 +130,20 @@
             </div>
           </div>
         </section>
+        --->
+        <template>
+          <div class="gallery__card">
+            <img class="gallery__card-image" src="" alt="" />
+            <div class="gallery__card-text">
+              <p class="gallery__card-name"></p>
+              <img
+                class="gallery__card-icon"
+                src="./images/Group.png"
+                alt="corazon"
+              />
+            </div>
+          </div>
+        </template>
       </main>
     </div>
     <footer class="footer">
@@ -164,6 +172,32 @@
         />
         <button type="submit" class="popup__submit-button">Guardar</button>
         <button type="button" class="popup__button-close"></button>
+      </form>
+    </section>
+    <!----Nuevo popup-->
+    <section class="popup__add">
+      <form class="popup__add-form">
+        <h2 class="popup__add-form-title">Nuevo Lugar</h2>
+        <input
+          class="popup__add-form-input popup__add-form-input-name"
+          type="text"
+          id="name"
+          name="name"
+          placeholder="Título"
+          value="Título"
+          required
+        />
+        <input
+          class="popup__add-form-input popup__add-form-input-job"
+          type="text"
+          id="job"
+          name="job"
+          placeholder="Enlace a la imagen"
+          value="Enlace a la imagen"
+          required
+        />
+        <button type="submit" class="popup__add-submit-button">Crear</button>
+        <button type="button" class="popup__add-button-close"></button>
       </form>
     </section>
     <script src="./scripts/index.js" type=""></script>
