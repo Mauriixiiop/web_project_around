@@ -37,7 +37,7 @@
             <img src="./images/Add Button.png" alt="Boton agregar" />
           </button>
         </section>
-        <!---Eliminar luego
+        <!---Eliminar
         <section class="gallery">
           <div class="gallery__card">
             <img
@@ -130,10 +130,13 @@
             </div>
           </div>
         </section>
-        --->
-        <template>
+        -->
+        <!---Las cartas-->
+        <section class="gallery" id="gallery"></section>
+        <template class="gallery__template" id="template">
           <div class="gallery__card">
             <img class="gallery__card-image" src="" alt="" />
+            <button type="button" class="gallery__card-delete"></button>
             <div class="gallery__card-text">
               <p class="gallery__card-name"></p>
               <img
@@ -144,62 +147,75 @@
             </div>
           </div>
         </template>
+        <!---Sección editar perfil-->
+        <section class="popup">
+          <form class="popup__form">
+            <h2 class="popup__form-title">Editar Perfil</h2>
+            <input
+              class="popup__form-input popup__form-input-name"
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Nombre"
+              value="Jacques Cousteau"
+              required
+            />
+            <input
+              class="popup__form-input popup__form-input-job"
+              type="text"
+              id="job"
+              name="job"
+              placeholder="Acerca de mi"
+              value="Explorador"
+              required
+            />
+            <button type="submit" class="popup__submit-button">Guardar</button>
+            <button type="button" class="popup__button-close"></button>
+          </form>
+        </section>
+        <!----Nuevo lugar-->
+        <section class="popup__add">
+          <form class="popup__add-form">
+            <h2 class="popup__add-form-title">Nuevo Lugar</h2>
+            <input
+              class="popup__add-form-input popup__add-form-input-name"
+              type="text"
+              id="name"
+              name="name"
+              placeholder="Título"
+              value="Título"
+              required
+            />
+            <input
+              class="popup__add-form-input popup__add-form-input-image"
+              type="text"
+              id="enlace"
+              name="enlace"
+              placeholder="Enlace a la imagen"
+              value="Enlace a la imagen"
+              required
+            />
+            <button type="submit" class="popup__add-submit-button">
+              Crear
+            </button>
+            <button type="button" class="popup__add-button-close"></button>
+          </form>
+        </section>
+        <!---Popup img grande-->
+        <div class="popup__image">
+          <div class="popup__image-container">
+            <div class="popup__image-button-close"></div>
+            <img class="popup_img" src="" alt="" />
+            <div class="popup__image-text">
+              <p class="popup__text"></p>
+            </div>
+          </div>
+        </div>
       </main>
     </div>
     <footer class="footer">
       <p>© 2025 Around The U.S. by Mauricio Pizarro</p>
     </footer>
-    <section class="popup">
-      <form class="popup__form">
-        <h2 class="popup__form-title">Editar Perfil</h2>
-        <input
-          class="popup__form-input popup__form-input-name"
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Nombre"
-          value="Jacques Cousteau"
-          required
-        />
-        <input
-          class="popup__form-input popup__form-input-job"
-          type="text"
-          id="job"
-          name="job"
-          placeholder="Acerca de mi"
-          value="Explorador"
-          required
-        />
-        <button type="submit" class="popup__submit-button">Guardar</button>
-        <button type="button" class="popup__button-close"></button>
-      </form>
-    </section>
-    <!----Nuevo popup-->
-    <section class="popup__add">
-      <form class="popup__add-form">
-        <h2 class="popup__add-form-title">Nuevo Lugar</h2>
-        <input
-          class="popup__add-form-input popup__add-form-input-name"
-          type="text"
-          id="name"
-          name="name"
-          placeholder="Título"
-          value="Título"
-          required
-        />
-        <input
-          class="popup__add-form-input popup__add-form-input-job"
-          type="text"
-          id="job"
-          name="job"
-          placeholder="Enlace a la imagen"
-          value="Enlace a la imagen"
-          required
-        />
-        <button type="submit" class="popup__add-submit-button">Crear</button>
-        <button type="button" class="popup__add-button-close"></button>
-      </form>
-    </section>
     <script src="./scripts/index.js" type=""></script>
   </body>
 </html>

@@ -63,6 +63,16 @@
   padding-right: 18px;
 }
 
+.gallery__card-icon-active {
+  display: flex;
+  background-image: url(../images/corazon\ negro.svg);
+  background-repeat: no-repeat;
+  cursor: pointer;
+  width: 21px;
+  height: 19px;
+  border: none;
+}
+
 .gallery__card-icon:hover {
   opacity: 0.5;
   cursor: pointer;
