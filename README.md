@@ -15,7 +15,14 @@ JavaScript: Utilizado para darle interactividad y una función dinámica a la p�
 Características del proyecto
 
 Vista a la página principal:
+
 ![alt text](<images/Captura de pantalla 2025-03-14 214505.png>)
+
+Cuadros emergentes "Editar perfil" y "Nuevo Lugar"
+
+![alt text](image-2.png)
+
+![alt text](image-3.png)
 
 Autor
 Mauricio Pizarro
