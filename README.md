@@ -12,6 +12,11 @@ CSS: Utilizado para diseñar la interfaz, en el cual se ha aplicado distintos es
 
 JavaScript: Utilizado para darle interactividad y una función dinámica a la página web, empleando la manipulación del DOM.
 
+Características del proyecto
+
+Vista a la página principal:
+![alt text](<images/Captura de pantalla 2025-03-14 214505.png>)
+
 Autor
 Mauricio Pizarro
 

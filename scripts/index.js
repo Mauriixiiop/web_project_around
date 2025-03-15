@@ -89,7 +89,7 @@ function createCard(data) {
   const templateGallery = document.querySelector("#template").content;
   const card = templateGallery
     .querySelector(".gallery__card")
-    .cloneNode(true); /*opción de las cartas*/
+    .cloneNode(true); /*Ingresa a template*/
   const cardImage = card.querySelector(
     ".gallery__card-image"
   ); /*selecciona la img*/
