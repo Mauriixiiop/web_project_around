@@ -35,7 +35,6 @@
 .popup__add-form-input {
   width: 358px;
   height: 27.26px;
-  max-width: 100%;
   border: 1px;
   margin-bottom: 29.74px;
   display: flex;
@@ -82,4 +81,41 @@
 .popup__add_opened {
   display: flex;
   background-color: rgba(0, 0, 0, 0.5);
+}
+
+@media screen and (max-width: 768px) {
+  .popup__add-form {
+    max-width: 282px;
+    height: 322px;
+    width: 100%;
+  }
+  .popup__add-form-title {
+    font-size: 18px;
+    line-height: 21.78px;
+    margin: 25px 22px;
+  }
+
+  .popup__add-form-input {
+    max-width: 238px;
+    height: 26px;
+  }
+
+  .popup__add-submit-button {
+    margin-top: 46px;
+    width: 238px;
+    height: 46px;
+  }
+
+  .popup__add-button-close {
+    width: 80px;
+    height: 80px;
+    background-color: transparent;
+  }
+}
+
+@media screen and (max-width: 320px) {
+  .popup__add {
+    display: flx;
+    justify-content: center;
+  }
 }

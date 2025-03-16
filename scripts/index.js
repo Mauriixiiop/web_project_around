@@ -110,6 +110,7 @@ function createCard(data) {
   cardImage.addEventListener("click", () => {
     handlePopupImageOpen(data.name, data.link);
   });
+
   return card;
 }
 

@@ -114,15 +114,15 @@
   }
 
   .popup__button-close {
-    width: 26px;
-    height: 26px;
+    width: 80px;
+    height: 80px;
+    background-color: transparent;
   }
 }
 
 @media screen and (max-width: 320px) {
   .popup {
-    display: flex;
     justify-content: center;
-    display: none;
+    flex-direction: column;
   }
 }
