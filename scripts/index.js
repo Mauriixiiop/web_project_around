@@ -113,7 +113,7 @@ function createCard(data) {
 
   return card;
 }
-
+/*arreglar*/
 initialCards.forEach(function (card) {
   const cardElement = createCard(card);
   const cards = document.querySelector(".gallery");
@@ -147,5 +147,7 @@ buttonClosePopup.addEventListener("click", handlePopupClose);
 
 buttonAddProfile.addEventListener("click", handlePopupAddOpen);
 buttonCloseAdd.addEventListener("click", handlePopupAddClose);
-formAdd.addEventListener("submit", handlePopupImageOpen);
+addCards();
+/*formAdd.addEventListener("submit", handlePopupImageOpen); /*arreglar*/
+formAdd.addEventListener("submit", handleProfileFormSubmit);
 closePopupImage.addEventListener("click", handlePopupImageClose);
