@@ -147,7 +147,7 @@ buttonClosePopup.addEventListener("click", handlePopupClose);
 
 buttonAddProfile.addEventListener("click", handlePopupAddOpen);
 buttonCloseAdd.addEventListener("click", handlePopupAddClose);
-addCards();
-/*formAdd.addEventListener("submit", handlePopupImageOpen); /*arreglar*/
+
+/*formAdd.addEventListener("submit", handlePopupImageOpen); /*sacar*/
 formAdd.addEventListener("submit", handleProfileFormSubmit);
 closePopupImage.addEventListener("click", handlePopupImageClose);
