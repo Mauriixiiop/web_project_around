@@ -113,11 +113,20 @@ function createCard(data) {
 
   return card;
 }
-/*arreglar*/
-initialCards.forEach(function (card) {
+
+function handleCardFormSubmit(evt) {
+  evt.preventDefault();
+  const card = { link: addImage.value, name: addName.value };
   const cardElement = createCard(card);
   const cards = document.querySelector(".gallery");
   cards.prepend(cardElement);
+}
+
+/**/
+initialCards.forEach(function (card) {
+  const cardElement = createCard(card);
+  const cards = document.querySelector(".gallery");
+  cards.append(cardElement);
 });
 
 function handleProfileFormSubmit(evt) {
@@ -148,6 +157,5 @@ buttonClosePopup.addEventListener("click", handlePopupClose);
 buttonAddProfile.addEventListener("click", handlePopupAddOpen);
 buttonCloseAdd.addEventListener("click", handlePopupAddClose);
 
-/*formAdd.addEventListener("submit", handlePopupImageOpen); /*sacar*/
-formAdd.addEventListener("submit", handleProfileFormSubmit);
+formAdd.addEventListener("submit", handleCardFormSubmit);
 closePopupImage.addEventListener("click", handlePopupImageClose);
