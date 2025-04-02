@@ -38,8 +38,44 @@
   height: 27.26px;
   max-width: 100%;
   border: 1px;
-  margin-bottom: 29.74px;
+  /*margin-bottom: 29.74px;*/
   display: flex;
+  margin: 0;
+  margin-bottom: 31px;
+}
+
+.popup__form-name-error {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: #ff0000;
+  width: 316px;
+  height: 12px;
+  font-size: 12px;
+}
+
+.popup__form-name-error:invalid {
+  border: #ff0000;
+}
+
+.popup__form-job-error {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: #ff0000;
+  width: 316px;
+  height: 12px;
+  font-size: 12px;
+}
+
+.popup__form-job-error:invalid {
+  border-bottom: #ff0000;
+}
+
+.validation-error {
+  color: #ff0000;
+}
+
+.hidden-error {
+  display: none;
 }
 
 .popup__submit-button {

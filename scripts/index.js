@@ -66,6 +66,14 @@ function handlePopupClose() {
   openPopup.classList.remove("popup_opened");
 }
 
+function handleProfileFormSubmit(evt) {
+  /*popup editar*/
+  evt.preventDefault();
+  profileName.textContent = nameInput.value;
+  profileJob.textContent = jobInput.value;
+  openPopup.classList.remove("popup_opened");
+}
+
 function handlePopupAddOpen() {
   /*Abrir el otro popup*/
   openPopupAdd.classList.add("popup__add_opened");
@@ -76,6 +84,7 @@ function handlePopupAddClose() {
   openPopupAdd.classList.remove("popup__add_opened");
 }
 
+/* Aquí se aplica el array */
 function addCards() {
   initialCards.forEach((item) => {
     const card = createCard(item.name, item.link);
@@ -85,7 +94,7 @@ function addCards() {
 }
 
 function createCard(data) {
-  /*crea las cartas*/
+  /*hace las copias*/
   const templateGallery = document.querySelector("#template").content;
   const card = templateGallery
     .querySelector(".gallery__card")
@@ -129,14 +138,6 @@ initialCards.forEach(function (card) {
   cards.append(cardElement);
 });
 
-function handleProfileFormSubmit(evt) {
-  /*popup editar*/
-  evt.preventDefault();
-  profileName.textContent = nameInput.value;
-  profileJob.textContent = jobInput.value;
-  openPopup.classList.remove("popup_opened");
-}
-
 function handlePopupImageOpen(name, link) {
   const popupImg = openPopupImage.querySelector(".popup__img");
   const popupText = openPopupImage.querySelector(".popup__text");
@@ -159,3 +160,63 @@ buttonCloseAdd.addEventListener("click", handlePopupAddClose);
 
 formAdd.addEventListener("submit", handleCardFormSubmit);
 closePopupImage.addEventListener("click", handlePopupImageClose);
+
+//variables de la validación
+const formNameError = document.querySelector(".popup__form-name-error");
+const formJobError = document.querySelector(".popup__form-job-error");
+const formTitleError = document.querySelector(".popup__add-title-error");
+const formUrlError = document.querySelector(".popup__add-url-error");
+
+//
+buttonPopup.addEventListener("click", () => {
+  enableValidation({
+    nameSelector: ".popup__form-input-name",
+    jobSelector: ".popup__form-input-job",
+    errorNameSelector: ".popup__form-name-error",
+    errorJobSelector: ".popup__form-job-error",
+    submitButtonSelector: ".popup__submit-button",
+  });
+});
+
+buttonAddProfile.addEventListener("click", () => {
+  enableValidation({
+    nameSelector: ".popup__add-form-input-name",
+    jobSelector: ".popup__add-form-input-image",
+    errorNameSelector: ".popup__add-title-error",
+    errorJobSelector: ".popup__add-url-error",
+    submitButtonSelector: ".popup__add-submit-button",
+  });
+});
+
+function enableValidation(validationData) {
+  const submitButton = document.querySelector(
+    validationData.submitButtonSelector
+  );
+  const name = document.querySelector(validationData.nameSelector);
+  const formNameError = document.querySelector(
+    validationData.errorNameSelector
+  );
+  name.addEventListener("input", (evt) => {
+    const isValid = name.validity.valid;
+    if (isValid) {
+      formNameError.classList.add(".hidden-error");
+      submitButton.disabled = false;
+    } else {
+      formNameError.classList.remove(".hidden-error");
+      submitButton.disabled = true;
+    }
+  });
+
+  const job = document.querySelector(validationData.jobSelector);
+  const formJobError = document.querySelector(validationData.errorJobSelector);
+  job.addEventListener("input", (evt) => {
+    const isValid = job.validity.valid;
+    if (isValid) {
+      formJobError.classList.add(".hidden-error");
+      submitButton.disabled = false;
+    } else {
+      formJobError.classList.remove(".hidden-error");
+      submitButton.disabled = true;
+    }
+  });
+}

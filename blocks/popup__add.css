@@ -40,6 +40,27 @@
   display: flex;
 }
 
+.popup__add-title-error {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: #ff0000;
+  width: 316px;
+  height: 12px;
+  font-size: 12px;
+}
+
+.popup__form-name-error:invalid {
+}
+
+.popup__add-url-error {
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  color: #ff0000;
+  width: 316px;
+  height: 12px;
+  font-size: 12px;
+}
+
 .popup__add-submit-button {
   width: 358px;
   height: 50.15px;

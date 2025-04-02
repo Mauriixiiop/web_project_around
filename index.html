@@ -60,22 +60,36 @@
             <input
               class="popup__form-input popup__form-input-name"
               type="text"
-              id="name"
+              id="name-text"
               name="name"
               placeholder="Nombre"
-              value="Jacques Cousteau"
+              minlength="2"
+              maxlength="40"
               required
             />
+            <span
+              class="popup__form-name-error validation-error hidden-error"
+              id="name-text-error"
+              >Por favor, rellene este campo</span
+            >
             <input
               class="popup__form-input popup__form-input-job"
               type="text"
               id="job"
               name="job"
               placeholder="Acerca de mi"
-              value="Explorador"
+              minlength="2"
+              maxlength="200"
               required
             />
-            <button type="submit" class="popup__submit-button">Guardar</button>
+            <span
+              class="popup__form-job-error validation-error hidden-error"
+              id="job-text-error"
+              >Por favor, rellene este campo</span
+            >
+            <button type="submit" disabled class="popup__submit-button">
+              Guardar
+            </button>
             <button type="button" class="popup__button-close"></button>
           </form>
         </section>
@@ -89,18 +103,25 @@
               id="name"
               name="name"
               placeholder="Título"
-              value="Título"
+              minlength="2"
+              maxlength="30"
               required
             />
+            <span class="popup__add-title-error validation-error hidden-error"
+              >Por favor, rellene este campo</span
+            >
             <input
               class="popup__add-form-input popup__add-form-input-image"
               type="text"
               id="enlace"
               name="enlace"
               placeholder="Enlace a la imagen"
-              value="Enlace a la imagen"
+              id="img-url"
               required
             />
+            <span class="popup__add-url-error validation-error hidden-error"
+              >URL no válida</span
+            >
             <button type="submit" class="popup__add-submit-button">
               Crear
             </button>
@@ -122,6 +143,6 @@
     <footer class="footer">
       <p>© 2025 Around The U.S. by Mauricio Pizarro</p>
     </footer>
-    <script src="./scripts/index.js" type=""></script>
+    <script src="./scripts/index.js" type="module"></script>
   </body>
 </html>
