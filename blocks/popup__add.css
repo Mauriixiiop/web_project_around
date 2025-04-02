@@ -50,6 +50,7 @@
 }
 
 .popup__form-name-error:invalid {
+  border-bottom: #ff0000;
 }
 
 .popup__add-url-error {

@@ -167,7 +167,7 @@ const formJobError = document.querySelector(".popup__form-job-error");
 const formTitleError = document.querySelector(".popup__add-title-error");
 const formUrlError = document.querySelector(".popup__add-url-error");
 
-//
+//selectores para validar
 buttonPopup.addEventListener("click", () => {
   enableValidation({
     nameSelector: ".popup__form-input-name",
@@ -188,14 +188,10 @@ buttonAddProfile.addEventListener("click", () => {
   });
 });
 
-function enableValidation(validationData) {
-  const submitButton = document.querySelector(
-    validationData.submitButtonSelector
-  );
-  const name = document.querySelector(validationData.nameSelector);
-  const formNameError = document.querySelector(
-    validationData.errorNameSelector
-  );
+function enableValidation(validation) {
+  const submitButton = document.querySelector(validation.submitButtonSelector);
+  const name = document.querySelector(validation.nameSelector);
+  const formNameError = document.querySelector(validation.errorNameSelector);
   name.addEventListener("input", (evt) => {
     const isValid = name.validity.valid;
     if (isValid) {
@@ -207,8 +203,8 @@ function enableValidation(validationData) {
     }
   });
 
-  const job = document.querySelector(validationData.jobSelector);
-  const formJobError = document.querySelector(validationData.errorJobSelector);
+  const job = document.querySelector(validation.jobSelector);
+  const formJobError = document.querySelector(validation.errorJobSelector);
   job.addEventListener("input", (evt) => {
     const isValid = job.validity.valid;
     if (isValid) {
