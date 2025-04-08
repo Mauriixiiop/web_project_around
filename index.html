@@ -54,11 +54,12 @@
           </div>
         </template>
         <!---Sección editar perfil-->
-        <section class="popup">
+        <section class="popup" id="popup">
           <form class="popup__form">
             <h2 class="popup__form-title">Editar Perfil</h2>
+            <!--mover el h2 arriba de form, no poner label-->
             <input
-              class="popup__form-input popup__form-input-name validation-error"
+              class="popup__input popup__input-name"
               type="text"
               id="name-text"
               name="name"
@@ -67,13 +68,14 @@
               maxlength="40"
               required
             />
-            <span
-              class="popup__form-name-error validation-error hidden-error"
-              id="name-text-error"
+            <!--cambiar clase a popup__input-->
+            <!--dejar una clase en el imput que conecte css y js, y en js escribir el msj-->
+            <span class="popup__input-error" id="name-text-error"
               >Por favor, rellene este campo</span
             >
+            <!--clase popup__message-->
             <input
-              class="popup__form-input popup__form-input-job"
+              class="popup__input popup__input-job"
               type="text"
               id="job"
               name="job"
@@ -82,9 +84,7 @@
               maxlength="200"
               required
             />
-            <span
-              class="popup__form-job-error validation-error hidden-error"
-              id="job-text-error"
+            <span class="popup__input-error" id="job-text-error"
               >Por favor, rellene este campo</span
             >
             <button type="submit" disabled class="popup__submit-button">
@@ -98,7 +98,7 @@
           <form class="popup__add-form">
             <h2 class="popup__add-form-title">Nuevo Lugar</h2>
             <input
-              class="popup__add-form-input popup__add-form-input-name"
+              class="popup__add-input popup__add-input-name"
               type="text"
               id="name"
               name="name"
@@ -107,11 +107,11 @@
               maxlength="30"
               required
             />
-            <span class="popup__add-title-error validation-error hidden-error"
+            <span class="popup__add-title-error"
               >Por favor, rellene este campo</span
             >
             <input
-              class="popup__add-form-input popup__add-form-input-image"
+              class="popup__add-input popup__add-input-image"
               type="text"
               id="enlace"
               name="enlace"
@@ -119,9 +119,7 @@
               id="img-url"
               required
             />
-            <span class="popup__add-url-error validation-error hidden-error"
-              >URL no válida</span
-            >
+            <span class="popup__add-url-error">URL no válida</span>
             <button type="submit" class="popup__add-submit-button">
               Crear
             </button>

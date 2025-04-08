@@ -2,16 +2,16 @@ const openPopup = document.querySelector(".popup");
 const buttonPopup = document.querySelector(".profile__edit-button");
 const buttonClosePopup = document.querySelector(".popup__button-close");
 const formElement = document.querySelector(".popup__form");
-const nameInput = document.querySelector(".popup__form-input-name");
-const jobInput = document.querySelector(".popup__form-input-job");
+const nameInput = document.querySelector(".popup__input-name");
+const jobInput = document.querySelector(".popup__input-job");
 const profileName = document.querySelector(".profile__name");
 const profileJob = document.querySelector(".profile__job");
 const buttonSubmit = document.querySelector(".popup__submit-button");
 
 const openPopupAdd = document.querySelector(".popup__add");
 const formAdd = document.querySelector(".popup__add-form");
-const addName = document.querySelector(".popup__add-form-input-name");
-const addImage = document.querySelector(".popup__add-form-input-image");
+const addName = document.querySelector(".popup__add-input-name");
+const addImage = document.querySelector(".popup__add-input-image");
 const buttonSubmitAdd = document.querySelector(".popup__add-submit-button");
 const buttonCloseAdd = document.querySelector(".popup__add-button-close");
 
@@ -162,12 +162,12 @@ formAdd.addEventListener("submit", handleCardFormSubmit);
 closePopupImage.addEventListener("click", handlePopupImageClose);
 
 //variables de la validación
-const formNameError = document.querySelector(".popup__form-name-error");
+const formNameError = document.querySelector(".popup__form-name-error"); //cambiar clase
 const formJobError = document.querySelector(".popup__form-job-error");
 const formTitleError = document.querySelector(".popup__add-title-error");
 const formUrlError = document.querySelector(".popup__add-url-error");
 
-//selectores para validar
+//selectores para validar/ CAMBIAR LOS NOMBRES COMO ESTÁN EN LAS INSTR
 buttonPopup.addEventListener("click", () => {
   enableValidation({
     nameSelector: ".popup__form-input-name",

@@ -32,7 +32,7 @@
   position: relative;
 }
 
-.popup__add-form-input {
+.popup__add-input {
   width: 358px;
   height: 27.26px;
   border: 1px;
@@ -117,7 +117,7 @@
     margin: 25px 22px;
   }
 
-  .popup__add-form-input {
+  .popup__add-input {
     max-width: 238px;
     height: 26px;
   }
