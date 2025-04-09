@@ -165,7 +165,7 @@ closePopupImage.addEventListener("click", handlePopupImageClose);
 const formNameError = document.querySelector(".popup__form-name-error"); //cambiar clase
 const formJobError = document.querySelector(".popup__form-job-error");
 const formTitleError = document.querySelector(".popup__add-title-error");
-const formUrlError = document.querySelector(".popup__add-url-error");
+const formUrlError = document.querySelector(".popup__add-url-error"); //cambiar clase
 
 //selectores para validar/ CAMBIAR LOS NOMBRES COMO ESTÁN EN LAS INSTR
 buttonPopup.addEventListener("click", () => {
