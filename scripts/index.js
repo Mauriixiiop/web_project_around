@@ -1,3 +1,5 @@
+import { enableValidation } from "./validate.js";
+
 const openPopup = document.querySelector(".popup");
 const buttonPopup = document.querySelector(".profile__edit-button");
 const buttonClosePopup = document.querySelector(".popup__button-close");
@@ -161,11 +163,23 @@ buttonCloseAdd.addEventListener("click", handlePopupAddClose);
 formAdd.addEventListener("submit", handleCardFormSubmit);
 closePopupImage.addEventListener("click", handlePopupImageClose);
 
+enableValidation({
+  formSelector: ".popup__form",
+  inputSelector: ".popup__input",
+  submitButtonSelector: ".popup__submit-button",
+  inactiveButtonClass: ".popup__button-close",
+  inputErrorClass: ".popup__input-error",
+  errorClass: "popup__error_visible",
+});
+
 //variables de la validación
+/*
 const formNameError = document.querySelector(".popup__form-name-error"); //cambiar clase
 const formJobError = document.querySelector(".popup__form-job-error");
 const formTitleError = document.querySelector(".popup__add-title-error");
 const formUrlError = document.querySelector(".popup__add-url-error"); //cambiar clase
+
+/*
 
 //selectores para validar/ CAMBIAR LOS NOMBRES COMO ESTÁN EN LAS INSTR
 buttonPopup.addEventListener("click", () => {
@@ -216,3 +230,5 @@ function enableValidation(validation) {
     }
   });
 }
+
+*/

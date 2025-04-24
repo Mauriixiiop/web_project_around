@@ -70,23 +70,19 @@
             />
             <!--cambiar clase a popup__input-->
             <!--dejar una clase en el imput que conecte css y js, y en js escribir el msj-->
-            <span class="popup__input-error" id="name-text-error"
-              >Por favor, rellene este campo</span
-            >
+            <span class="popup__input-error" id="name-text-error"></span>
             <!--clase popup__message-->
             <input
               class="popup__input popup__input-job"
               type="text"
-              id="job"
+              id="profile-description"
               name="job"
               placeholder="Acerca de mi"
               minlength="2"
               maxlength="200"
               required
             />
-            <span class="popup__input-error" id="job-text-error"
-              >Por favor, rellene este campo</span
-            >
+            <span class="popup__input-error" id="job-text-error"></span>
             <button type="submit" disabled class="popup__submit-button">
               Guardar
             </button>
@@ -98,7 +94,7 @@
           <form class="popup__add-form">
             <h2 class="popup__add-form-title">Nuevo Lugar</h2>
             <input
-              class="popup__add-input popup__add-input-name"
+              class="popup__input popup__add-input-name"
               type="text"
               id="name"
               name="name"
@@ -107,7 +103,7 @@
               maxlength="30"
               required
             />
-            <span class="popup__add-error">Por favor, rellene este campo</span>
+            <span class="popup__input-error"></span>
             <input
               class="popup__add-input popup__add-input-image"
               type="text"
@@ -117,7 +113,7 @@
               id="img-url"
               required
             />
-            <span class="popup__add-error">URL no válida</span>
+            <span class="popup__input-error"></span>
             <button type="submit" class="popup__add-submit-button">
               Crear
             </button>
