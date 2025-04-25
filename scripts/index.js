@@ -169,7 +169,7 @@ enableValidation({
   submitButtonSelector: ".popup__submit-button",
   inactiveButtonClass: ".popup__button-close",
   inputErrorClass: ".popup__input-error",
-  errorClass: "popup__error_visible",
+  errorClass: ".popup__error_visible",
 });
 
 //variables de la validación
