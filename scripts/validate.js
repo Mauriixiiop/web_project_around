@@ -17,7 +17,7 @@ const hideError = (input, requirements) => {
   errorElement.textContent = "";
 };
 
-//función para la validación de input
+//función para la validación de input, aplicar los errores o no
 const checkInputValidity = (input, requirements) => {
   if (input.validity.valid) {
     hideError(input, requirements);
@@ -26,7 +26,7 @@ const checkInputValidity = (input, requirements) => {
   }
 };
 
-//
+//estado del boton
 const toogleButtonState = (form, button, requirements) => {
   const inputs = Array.from(form.querySelectorAll(requirements.inputSelector));
   const isValid = inputs.every((input) => input.validity.valid);
@@ -39,7 +39,7 @@ const toogleButtonState = (form, button, requirements) => {
 
 //todos los input, establece los eventos input y submit
 const setEventListeners = (formElement, requirements) => {
-  const inputs = formElement.querySelectorAll(requirements.inputSelector);
+  const inputs = formElement.querySelectorAll(requirements.inputSelector); //trae todos los elementos de input, es un arreglo
 
   const button = formElement.querySelector(requirements.submitButtonSelector);
 
@@ -59,8 +59,8 @@ const setEventListeners = (formElement, requirements) => {
 
 //habilita la validación
 export const enableValidation = (requirements) => {
-  const forms = document.querySelectorAll(requirements.formSelector);
-  //llama a todos los formularios
+  const forms = document.querySelectorAll(requirements.formSelector); //selecciona a todos los formularios
+  console.log(forms, "forms");
   forms.forEach((formElement) => {
     setEventListeners(formElement, requirements);
   });

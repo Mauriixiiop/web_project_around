@@ -79,19 +79,24 @@
               maxlength="200"
               required
             />
-            <span class="popup__input-error" id="job-text-error"></span>
-            <button type="submit" class="popup__submit-button">Guardar</button>
+            <span
+              class="popup__input-error"
+              id="profile-description-error"
+            ></span>
+            <button type="submit" class="popup__submit-button" disabled>
+              Guardar
+            </button>
             <button type="button" class="popup__button-close"></button>
           </form>
         </section>
         <!----Nuevo lugar-->
         <section class="popup__add">
-          <form class="popup__add-form">
+          <form class="popup__form popup__add-form">
             <h2 class="popup__add-form-title">Nuevo Lugar</h2>
             <input
               class="popup__input popup__add-input-name"
               type="text"
-              id="name"
+              id="name-add"
               name="name"
               placeholder="Título"
               minlength="2"
@@ -101,15 +106,18 @@
             <span class="popup__input-error" id="name-add-error"></span>
             <input
               class="popup__input popup__add-input-image"
-              type="text"
-              id="enlace"
+              type="url"
+              id="enlace-add"
               name="enlace"
               placeholder="Enlace a la imagen"
               id="img-url"
               required
             />
-            <span class="popup__input-error"></span>
-            <button type="submit" class="popup__add-submit-button">
+            <span class="popup__input-error" id="enlace-add-error"></span>
+            <button
+              type="submit"
+              class="popup__submit-button popup__add-submit-button"
+            >
               Crear
             </button>
             <button type="button" class="popup__add-button-close"></button>
