@@ -182,14 +182,6 @@ document.addEventListener("keydown", (event) => {
   }
 });
 
-document.addEventListener("keydown", (event) => {
-  if (event.key === "Escape") {
-    handlePopupClose();
-    handlePopupAddClose();
-    handlePopupImageClose();
-  }
-});
-
 document.addEventListener("click", (event) => {
   if (openPopup === event.target) {
     handlePopupClose();
