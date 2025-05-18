@@ -172,4 +172,34 @@ enableValidation({
   errorClass: ".popup__error",
 });
 
-//evento keydown y click cerrar popup al dar escp, agregar evento presionar fuera click
+//evento keydown y click
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    handlePopupClose();
+    handlePopupAddClose();
+    handlePopupImageClose();
+  }
+});
+
+document.addEventListener("keydown", (event) => {
+  if (event.key === "Escape") {
+    handlePopupClose();
+    handlePopupAddClose();
+    handlePopupImageClose();
+  }
+});
+
+document.addEventListener("click", (event) => {
+  if (openPopup === event.target) {
+    handlePopupClose();
+  }
+  //2do popup
+  if (openPopupAdd === event.target) {
+    handlePopupAddClose();
+  }
+  //3er popup
+  if (addImage === event.target) {
+    handlePopupImageClose();
+  }
+});

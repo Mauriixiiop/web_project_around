@@ -79,6 +79,14 @@
   background-color: rgba(0, 0, 0, 0.5);
 }
 
+.popup__submit-button:disabled {
+  background-color: transparent;
+  color: #c2c2c2;
+  pointer-events: none;
+  border-color: #c2c2c2;
+  border-style: groove;
+}
+
 .popup__button-close {
   background-image: url("../images/Close\ Icon.png");
   width: 40px;
