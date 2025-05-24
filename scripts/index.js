@@ -162,6 +162,7 @@ buttonCloseAdd.addEventListener("click", handlePopupAddClose);
 
 formAdd.addEventListener("submit", handleCardFormSubmit);
 closePopupImage.addEventListener("click", handlePopupImageClose);
+buttonSubmitAdd.addEventListener("click", handlePopupAddClose); //agregado
 
 enableValidation({
   formSelector: ".popup__form",
