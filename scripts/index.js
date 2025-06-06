@@ -1,4 +1,6 @@
 import { enableValidation } from "./validate.js";
+import { handlePopupImageOpen } from "./utils.js";
+import { Card } from "./Card.js";
 
 const openPopup = document.querySelector(".popup");
 const buttonPopup = document.querySelector(".profile__edit-button");
@@ -94,60 +96,55 @@ function addCards() {
     openPopupAdd.classList.remove("popup__add_opened");
   });
 }
-
+/*
 function createCard(data) {
-  /*hace las copias*/
+  //Clonar template
   const templateGallery = document.querySelector("#template").content;
-  const card = templateGallery
-    .querySelector(".gallery__card")
-    .cloneNode(true); /*Ingresa a template*/
-  const cardImage = card.querySelector(
-    ".gallery__card-image"
-  ); /*selecciona la img*/
+  const card = templateGallery.querySelector(".gallery__card").cloneNode(true);
+  // Asignación valores template
+  const cardImage = card.querySelector(".gallery__card-image");
   const cardName = card.querySelector(".gallery__card-name");
-  const cardLike = card.querySelector(".gallery__card-icon");
-  const cardDelete = card.querySelector(".gallery__card-delete");
 
   cardImage.src = data.link;
   cardImage.alt = data.name;
   cardName.textContent = data.name;
 
+  // Asignación eventos
+  const cardLike = card.querySelector(".gallery__card-icon");
+  const cardDelete = card.querySelector(".gallery__card-delete");
   cardDelete.addEventListener("click", () => {
     card.remove();
   });
   cardLike.addEventListener("click", () => {
     cardLike.classList.toggle("gallery__card-icon-active");
   });
+
   cardImage.addEventListener("click", () => {
     handlePopupImageOpen(data.name, data.link);
   });
 
   return card;
-}
+} */
 
 function handleCardFormSubmit(evt) {
   evt.preventDefault();
   const card = { link: addImage.value, name: addName.value };
-  const cardElement = createCard(card);
+  const newCard = createCard(card);
   const cards = document.querySelector(".gallery");
-  cards.prepend(cardElement);
+  cards.prepend(newCard.cardElement);
 }
 
-/**/
+/*AQUI PROBLEMA*/
 initialCards.forEach(function (card) {
+  //instanciando la clase card
+  const newCard = new Card(data.name, data.link, "#template"); //agregado
+  //utilizar metodo de la clase
+  const newNode = newCard.renderCard();
+
   const cardElement = createCard(card);
   const cards = document.querySelector(".gallery");
-  cards.append(cardElement);
+  cards.append(card.cardElement);
 });
-
-function handlePopupImageOpen(name, link) {
-  const popupImg = openPopupImage.querySelector(".popup__img");
-  const popupText = openPopupImage.querySelector(".popup__text");
-  popupImg.src = link;
-  popupImg.alt = name;
-  popupText.textContent = name;
-  openPopupImage.classList.add("popup__image_opened");
-}
 
 function handlePopupImageClose() {
   openPopupImage.classList.remove("popup__image_opened");
