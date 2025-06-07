@@ -1,6 +1,15 @@
 import { enableValidation } from "./validate.js";
-import { handlePopupImageOpen } from "./utils.js";
+import {
+  handlePopupImageOpen,
+  handlePopupImageClose,
+  openPopupProfile,
+  handlePopupOpen,
+  handlePopupClose,
+  handlePopupAddOpen,
+  handlePopupAddClose,
+} from "./utils.js";
 import { Card } from "./Card.js";
+import FormValidator from "./FormValidator.js";
 
 const openPopup = document.querySelector(".popup");
 const buttonPopup = document.querySelector(".profile__edit-button");
@@ -54,38 +63,12 @@ const initialCards = [
   },
 ];
 
-function openPopupProfile() {
-  handlePopupOpen();
-  nameInput.value = profileName.textContent;
-  jobInput.value = profileJob.textContent;
-}
-
-function handlePopupOpen() {
-  /* Abrir el popup*/
-  openPopup.classList.add("popup_opened");
-}
-
-function handlePopupClose() {
-  /* Cerrar el popup*/
-  openPopup.classList.remove("popup_opened");
-}
-
 function handleProfileFormSubmit(evt) {
   /*popup editar*/
   evt.preventDefault();
   profileName.textContent = nameInput.value;
   profileJob.textContent = jobInput.value;
   openPopup.classList.remove("popup_opened");
-}
-
-function handlePopupAddOpen() {
-  /*Abrir el otro popup*/
-  openPopupAdd.classList.add("popup__add_opened");
-}
-
-function handlePopupAddClose() {
-  /*Cerrar el otro popup*/
-  openPopupAdd.classList.remove("popup__add_opened");
 }
 
 /* Aquí se aplica el array */
@@ -124,7 +107,7 @@ function createCard(data) {
   });
 
   return card;
-} */
+} FUNCION EXPORT A CARD.JS*/
 
 function handleCardFormSubmit(evt) {
   evt.preventDefault();
@@ -137,7 +120,8 @@ function handleCardFormSubmit(evt) {
 /*AQUI PROBLEMA*/
 initialCards.forEach(function (card) {
   //instanciando la clase card
-  const newCard = new Card(data.name, data.link, "#template"); //agregado
+  //const newCard = new Card(data.name, data.link, "#template"); //agregado
+  const newCard = new Card(card, template);
   //utilizar metodo de la clase
   const newNode = newCard.renderCard();
 
@@ -145,10 +129,6 @@ initialCards.forEach(function (card) {
   const cards = document.querySelector(".gallery");
   cards.append(card.cardElement);
 });
-
-function handlePopupImageClose() {
-  openPopupImage.classList.remove("popup__image_opened");
-}
 
 formElement.addEventListener("submit", handleProfileFormSubmit);
 buttonPopup.addEventListener("click", handlePopupOpen);
@@ -161,7 +141,8 @@ formAdd.addEventListener("submit", handleCardFormSubmit);
 closePopupImage.addEventListener("click", handlePopupImageClose);
 buttonSubmitAdd.addEventListener("click", handlePopupAddClose); //agregado
 
-enableValidation({
+//creación
+const validator = new FormValidator({
   formSelector: ".popup__form",
   inputSelector: ".popup__input",
   submitButtonSelector: ".popup__submit-button",
@@ -169,6 +150,8 @@ enableValidation({
   inputErrorClass: ".popup__input-error",
   errorClass: ".popup__error",
 });
+//utilización
+validator.enableValidation();
 
 //evento keydown y click
 

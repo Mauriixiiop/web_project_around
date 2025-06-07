@@ -21,7 +21,7 @@ export class Card {
 
   setDataTemplate() {
     this.card = this.cloneTemplate();
-    this.card.querySelector(".gallery__card-image").src = cardData.link; //ojo con el nombre
+    this.card.querySelector(".gallery__card-image").src = this.cardData.link; //ojo con el nombre
     this.card.querySelector(".gallery__card-name").textContent =
       this.cardData.name;
     this.setEventListeners();
