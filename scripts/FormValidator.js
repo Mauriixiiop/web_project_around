@@ -1,7 +1,5 @@
-//exp def un todo
 export default class FormValidator {
   constructor(requirements) {
-    //cambios que se relacionan con el constructor
     this.requirements = requirements;
   }
 
@@ -22,9 +20,9 @@ export default class FormValidator {
 
   checkInputValidity(input) {
     if (input.validity.valid) {
-      hideError(input);
+      this.hideError(input);
     } else {
-      showError(input);
+      this.showError(input);
     }
   }
 
@@ -33,11 +31,7 @@ export default class FormValidator {
       form.querySelectorAll(this.requirements.inputSelector)
     );
     const isValid = inputs.every((input) => input.validity.valid);
-    if (isValid) {
-      button.disabled = false;
-    } else {
-      button.disabled = true;
-    }
+    button.disabled = !isValid;
   }
 
   setEventListeners(formElement) {
@@ -50,11 +44,11 @@ export default class FormValidator {
     );
 
     this.toggleButtonState(formElement, button);
-    //itera sobre los elementos
+
     inputs.forEach((input) => {
       input.addEventListener("input", () => {
         this.checkInputValidity(input);
-        this.toogleButtonState(formElement, button);
+        this.toggleButtonState(formElement, button); // corregido typo
       });
     });
 
@@ -64,12 +58,9 @@ export default class FormValidator {
   }
 
   enableValidation() {
-    const forms = document.querySelectorAll(this.requirements.formSelector); //selecciona a todos los formularios
-    console.log(forms, "forms");
+    const forms = document.querySelectorAll(this.requirements.formSelector);
     forms.forEach((formElement) => {
-      setEventListeners(formElement);
+      this.setEventListeners(formElement);
     });
   }
 }
-
-const FormValidator = new FormValidator();

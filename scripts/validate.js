@@ -57,7 +57,6 @@ const setEventListeners = (formElement, requirements) => {
   });
 };
 
-//AQUI PROBLEMA
 //habilita la validación
 export const enableValidation = (requirements) => {
   const forms = document.querySelectorAll(requirements.formSelector); //selecciona a todos los formularios

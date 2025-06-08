@@ -1,4 +1,4 @@
-import { handlePopupImageOpen } from "./utils";
+import { handlePopupImageOpen } from "./utils.js";
 //1. Creación de la clase
 export class Card {
   // 1A Declaración de las propiedades de la clase
@@ -6,6 +6,7 @@ export class Card {
     this.cardData = cardData;
     this.cardTemplate = cardTemplate;
     this.card = null;
+    this.cardImage = document.querySelector(".gallery__card-image");
   }
   //1B Declaración de los métodos de la clase
   renderCard() {
@@ -21,11 +22,15 @@ export class Card {
 
   setDataTemplate() {
     this.card = this.cloneTemplate();
-    this.card.querySelector(".gallery__card-image").src = this.cardData.link; //ojo con el nombre
+    const cardImage = this.card.querySelector(".gallery__card-image");
+    cardImage.src = this.cardData.link;
+    cardImage.alt = this.cardData.name;
     this.card.querySelector(".gallery__card-name").textContent =
       this.cardData.name;
+
+    this.cardImage = cardImage; // guardar referencia para eventos
     this.setEventListeners();
-    return this.card; //hacer el retorno para la funcionalidad
+    return this.card;
   }
 
   setEventListeners() {
@@ -33,13 +38,15 @@ export class Card {
     this.cardDelete = this.card.querySelector(".gallery__card-delete");
 
     this.cardDelete.addEventListener("click", () => {
-      card.remove();
+      this.card.remove();
     });
+
     this.cardLike.addEventListener("click", () => {
-      cardLike.classList.toggle("gallery__card-icon-active");
+      this.cardLike.classList.toggle("gallery__card-icon-active");
     });
+
     this.cardImage.addEventListener("click", () => {
-      handlePopupImageOpen(data.name, data.link);
+      handlePopupImageOpen(this.cardData.name, this.cardData.link);
     });
   }
 }
