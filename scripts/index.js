@@ -6,6 +6,9 @@ import {
   handlePopupClose,
   handlePopupAddOpen,
   handlePopupAddClose,
+  handleProfileFormSubmit,
+  handleCardFormSubmit,
+  addCards,
 } from "./utils.js";
 import { Card } from "./Card.js";
 import FormValidator from "./FormValidator.js";
@@ -61,7 +64,7 @@ const initialCards = [
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/lago.jpg",
   },
 ];
-
+/*
 function handleCardFormSubmit(evt) {
   evt.preventDefault();
   const card = { link: addImage.value, name: addName.value };
@@ -71,21 +74,21 @@ function handleCardFormSubmit(evt) {
 }
 
 function handleProfileFormSubmit(evt) {
-  /*popup editar*/
+  /*popup editar
   evt.preventDefault();
   profileName.textContent = nameInput.value;
   profileJob.textContent = jobInput.value;
   openPopup.classList.remove("popup_opened");
 }
 
-/* Aquí se aplica el array */
+/* Aquí se aplica el array
 function addCards() {
   initialCards.forEach((item) => {
     const card = createCard(item.name, item.link);
     gallery.append(card);
     openPopupAdd.classList.remove("popup__add_opened");
   });
-}
+} */
 
 //ARREGLADO
 initialCards.forEach(function (card) {
