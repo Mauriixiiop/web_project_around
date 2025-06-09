@@ -13,9 +13,12 @@ import {
 import { Card } from "./Card.js";
 import FormValidator from "./FormValidator.js";
 
+//POPUP
 const openPopup = document.querySelector(".popup");
-const buttonPopup = document.querySelector(".profile__edit-button");
-const buttonClosePopup = document.querySelector(".popup__button-close");
+const openPopupAdd = document.querySelector(".popup__add");
+const openPopupImage = document.querySelector(".popup__image");
+
+//POPUP CONTENT
 const formElement = document.querySelector(".popup__form");
 const nameInput = document.querySelector(".popup__input-name");
 const jobInput = document.querySelector(".popup__input-job");
@@ -23,17 +26,17 @@ const profileName = document.querySelector(".profile__name");
 const profileJob = document.querySelector(".profile__job");
 const buttonSubmit = document.querySelector(".popup__submit-button");
 
-const openPopupAdd = document.querySelector(".popup__add");
 const formAdd = document.querySelector(".popup__add-form");
 const addName = document.querySelector(".popup__add-input-name");
 const addImage = document.querySelector(".popup__add-input-image");
 const buttonSubmitAdd = document.querySelector(".popup__add-submit-button");
-const buttonCloseAdd = document.querySelector(".popup__add-button-close");
 
-const openPopupImage = document.querySelector(".popup__image");
-const closePopupImage = document.querySelector(".popup__image-button-close");
-
+//BOTONES ABRIR Y CERRAR POPUP
+const buttonPopup = document.querySelector(".profile__edit-button");
+const buttonClosePopup = document.querySelector(".popup__button-close");
 const buttonAddProfile = document.querySelector(".profile__add-button");
+const buttonCloseAdd = document.querySelector(".popup__add-button-close");
+const closePopupImage = document.querySelector(".popup__image-button-close");
 
 const gallery = document.querySelector(".gallery");
 const galleryTemplate = document.querySelector(".gallery__template");

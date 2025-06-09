@@ -12,18 +12,19 @@ export function handlePopupImageClose() {
   openPopupImage.classList.remove("popup__image_opened");
 }
 
+export function openPopupProfile() {
+  handlePopupOpen(openPopupImage);
+  nameInput.value = profileName.textContent;
+  jobInput.value = profileJob.textContent;
+}
+
 export function handleProfileFormSubmit(evt) {
   /*popup editar*/
   evt.preventDefault();
   profileName.textContent = nameInput.value;
   profileJob.textContent = jobInput.value;
-  openPopup.classList.remove("popup_opened");
-}
-
-export function openPopupProfile() {
-  handlePopupOpen();
-  nameInput.value = profileName.textContent;
-  jobInput.value = profileJob.textContent;
+  //openPopup.classList.remove("popup_opened");
+  handlePopupClose();
 }
 
 export function handleCardFormSubmit(evt) {
