@@ -13,30 +13,34 @@ import {
 import { Card } from "./Card.js";
 import FormValidator from "./FormValidator.js";
 
-//POPUP
-const openPopup = document.querySelector(".popup");
-const openPopupAdd = document.querySelector(".popup__add");
-const openPopupImage = document.querySelector(".popup__image");
-
-//POPUP CONTENT
-const formElement = document.querySelector(".popup__form");
-const nameInput = document.querySelector(".popup__input-name");
-const jobInput = document.querySelector(".popup__input-job");
+//PROFILE INFO
 const profileName = document.querySelector(".profile__name");
 const profileJob = document.querySelector(".profile__job");
-const buttonSubmit = document.querySelector(".popup__submit-button");
 
-const formAdd = document.querySelector(".popup__add-form");
-const addName = document.querySelector(".popup__add-input-name");
-const addImage = document.querySelector(".popup__add-input-image");
-const buttonSubmitAdd = document.querySelector(".popup__add-submit-button");
+//POPUPS
+const openPopup = document.querySelector(".popup"); //1ER POPUP
+const openPopupAdd = document.querySelector(".popup__add"); //2DO POPUP
+const openPopupImage = document.querySelector(".popup__image"); //IMG POPUP
+
+//POPUP CONTENT
+const formElement = document.querySelector(".popup__form"); //FORM EDITAR PERFIL
+const nameInput = document.querySelector(".popup__input-name"); //NOMBRE
+const jobInput = document.querySelector(".popup__input-job"); //ACERCA DE MÍ
+const formAdd = document.querySelector(".popup__add-form"); //FORM NUEVO LUGAR
+const addName = document.querySelector(".popup__add-input-name"); //TÍTULO
+const addImage = document.querySelector(".popup__add-input-image"); //ENLACE
+
+const buttonSubmit = document.querySelector(".popup__submit-button"); //GUARDAR
+const buttonSubmitAdd = document.querySelector(".popup__add-submit-button"); //CREAR
 
 //BOTONES ABRIR Y CERRAR POPUP
-const buttonPopup = document.querySelector(".profile__edit-button");
-const buttonClosePopup = document.querySelector(".popup__button-close");
-const buttonAddProfile = document.querySelector(".profile__add-button");
-const buttonCloseAdd = document.querySelector(".popup__add-button-close");
-const closePopupImage = document.querySelector(".popup__image-button-close");
+const buttonPopup = document.querySelector(".profile__edit-button"); // ABRIR LAPIZ
+const buttonAddProfile = document.querySelector(".profile__add-button"); // ABRIR +
+
+const buttonClosePopup = document.querySelector(".popup__button-close"); // X EDITAR P
+const buttonCloseAdd = document.querySelector(".popup__add-button-close"); // X NUEVO L
+
+const closePopupImage = document.querySelector(".popup__image-button-close"); // X IMG POPUP
 
 const gallery = document.querySelector(".gallery");
 const galleryTemplate = document.querySelector(".gallery__template");

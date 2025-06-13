@@ -5,7 +5,7 @@ export function handlePopupOpen(openPopup) {
 
 export function handlePopupClose() {
   /* Cerrar el popup*/
-  openPopup.classList.remove("popup_opened");
+  openPopup.classList.remove("popup_opened"); //ERROR
 }
 
 export function handlePopupImageClose() {
@@ -37,7 +37,7 @@ export function handleCardFormSubmit(evt) {
 
 export function handlePopupAddOpen() {
   /*Abrir el otro popup*/
-  openPopupAdd.classList.add("popup__add_opened");
+  openPopupAdd.classList.add("popup__add_opened"); //ERROR
 }
 
 export function handlePopupAddClose() {
@@ -53,7 +53,7 @@ export function addCards() {
   });
 }
 
-export function handlePopupImageOpen(name, link) {
+export function handlePopupImageOpen(name, link, openPopupImage) {
   const popupImg = openPopupImage.querySelector(".popup__img");
   const popupText = openPopupImage.querySelector(".popup__text");
   popupImg.src = link;
