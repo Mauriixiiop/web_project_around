@@ -71,31 +71,6 @@ const initialCards = [
     link: "https://practicum-content.s3.us-west-1.amazonaws.com/new-markets/WEB_sprint_5/ES/lago.jpg",
   },
 ];
-/*
-function handleCardFormSubmit(evt) {
-  evt.preventDefault();
-  const card = { link: addImage.value, name: addName.value };
-  const newCard = createCard(card);
-  const cards = document.querySelector(".gallery");
-  cards.prepend(newCard.cardElement);
-}
-
-function handleProfileFormSubmit(evt) {
-  /*popup editar
-  evt.preventDefault();
-  profileName.textContent = nameInput.value;
-  profileJob.textContent = jobInput.value;
-  openPopup.classList.remove("popup_opened");
-}
-
-/* Aquí se aplica el array
-function addCards() {
-  initialCards.forEach((item) => {
-    const card = createCard(item.name, item.link);
-    gallery.append(card);
-    openPopupAdd.classList.remove("popup__add_opened");
-  });
-} */
 
 //ARREGLADO
 initialCards.forEach(function (card) {
@@ -152,3 +127,29 @@ document.addEventListener("click", (event) => {
     handlePopupImageClose();
   }
 });
+
+/*
+function handleCardFormSubmit(evt) {
+  evt.preventDefault();
+  const card = { link: addImage.value, name: addName.value };
+  const newCard = createCard(card);
+  const cards = document.querySelector(".gallery");
+  cards.prepend(newCard.cardElement);
+}
+
+function handleProfileFormSubmit(evt) {
+  /*popup editar
+  evt.preventDefault();
+  profileName.textContent = nameInput.value;
+  profileJob.textContent = jobInput.value;
+  openPopup.classList.remove("popup_opened");
+}
+
+/* Aquí se aplica el array
+function addCards() {
+  initialCards.forEach((item) => {
+    const card = createCard(item.name, item.link);
+    gallery.append(card);
+    openPopupAdd.classList.remove("popup__add_opened");
+  });
+} */

@@ -8,12 +8,8 @@ export function handlePopupClose() {
   openPopup.classList.remove("popup_opened"); //ERROR
 }
 
-export function handlePopupImageClose() {
-  openPopupImage.classList.remove("popup__image_opened");
-}
-
 export function openPopupProfile() {
-  handlePopupOpen(openPopupImage);
+  handlePopupOpen(openPopup);
   nameInput.value = profileName.textContent;
   jobInput.value = profileJob.textContent;
 }
@@ -23,7 +19,7 @@ export function handleProfileFormSubmit(evt) {
   evt.preventDefault();
   profileName.textContent = nameInput.value;
   profileJob.textContent = jobInput.value;
-  //openPopup.classList.remove("popup_opened");
+  openPopup.classList.remove("popup_opened");
   handlePopupClose();
 }
 
@@ -60,4 +56,8 @@ export function handlePopupImageOpen(name, link, openPopupImage) {
   popupImg.alt = name;
   popupText.textContent = name;
   openPopupImage.classList.add("popup__image_opened");
+}
+
+export function handlePopupImageClose() {
+  openPopupImage.classList.remove("popup__image_opened");
 }
